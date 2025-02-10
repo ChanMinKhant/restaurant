@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Delicious Burger",
+    "image": "/burger.jpg",
+    "price": 8.99,
+    "categories": ["Fast Food", "Burger"],
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": 2,
+    "name": "Cheesy Pizza",
+    "image": "/pizza.jpg",
+    "price": 12.99,
+    "categories": ["Fast Food", "Italian"],
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": 3,
+    "name": "Spicy Noodles",
+    "image": "/fb.jpg",
+    "price": 7.49,
+    "categories": ["Asian", "Noodles"],
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": 4,
+    "name": "Vanilla Ice Cream",
+    "image": "/ice.jpg",
+    "price": 4.99,
+    "categories": ["Dessert", "Ice Cream"],
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": 5,
+    "name": "Steak",
+    "image": "/steak.jpg",
+    "price": 14.99,
+    "categories": ["Steak", "Dinner"],
+    "featured": false,
+    "trending": true
+  },
+  {
+    "id": 6,
+    "name": "Honey Pancake",
+    "image": "/ff.jpg",
+    "price": 10.49,
+    "categories": ["Dessert", "Pancakes"],
+    "featured": false,
+    "trending": true
+  },
+  {
+    "id": 7,
+    "name": "Smoothy Steak",
+    "image": "/meat.jpg",
+    "price": 7.99,
+    "categories": ["Steak", "Lunch"],
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": 8,
+    "name": "Salmon",
+    "image": "/fish.jpg",
+    "price": 13.99,
+    "categories": ["Seafood", "Healthy"],
+    "featured": false,
+    "trending": true
+  },
+  {
+    "id": 9,
+    "name": "Ramen Stu",
+    "image": "/healthy.jpg",
+    "price": 5.99,
+    "categories": ["Asian", "Noodles"],
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": 10,
+    "name": "Chicken Wings",
+    "image": "/chicken.jpg",
+    "price": 6.99,
+    "categories": ["Fast Food", "Chicken"],
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": 11,
+    "name": "Pasta",
+    "image": "/pasta.jpg",
+    "price": 9.99,
+    "categories": ["Italian", "Pasta"],
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": 12,
+    "name": "Crispy Sweet",
+    "image": "/crispy.jpg",
+    "price": 5.99,
+    "categories": ["Dessert", "Snacks"],
+    "featured": false,
+    "trending": false
+  }
+]

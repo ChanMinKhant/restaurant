@@ -1,0 +1,87 @@
+[
+  {
+    "orderId": 1,
+    "customerName": "John Doe",
+    "items": [
+      {
+        "foodName": "Chicken Burger",
+        "quantity": 2,
+        "price": 5.99,
+        "image": "/chicken_burger.jpg"
+      },
+      {
+        "foodName": "French Fries",
+        "quantity": 1,
+        "price": 2.99,
+        "image": "/fries.jpg"
+      }
+    ],
+    "totalPrice": 14.97,
+    "status": "Preparing",
+    "estimatedTime": "20 min",
+    "orderType": "Online Order",
+    "phoneNumber": "123-456-7890",
+    "address": "123 Main St, New York, NY",
+    "progress": 40
+  },
+  {
+    "orderId": 2,
+    "customerName": "Emily Smith",
+    "items": [
+      {
+        "foodName": "Pepperoni Pizza",
+        "quantity": 1,
+        "price": 12.99,
+        "image": "/pizza.jpg"
+      }
+    ],
+    "totalPrice": 12.99,
+    "status": "Pending",
+    "estimatedTime": "30 min",
+    "orderType": "Dine at Restaurant",
+    "tableNumber": 5,
+    "progress": 10
+  },
+  {
+    "orderId": 3,
+    "customerName": "Michael Brown",
+    "items": [
+      {
+        "foodName": "Pasta Alfredo",
+        "quantity": 1,
+        "price": 9.99,
+        "image": "/pasta.jpg"
+      },
+      {
+        "foodName": "Caesar Salad",
+        "quantity": 1,
+        "price": 4.99,
+        "image": "/salad.jpg"
+      }
+    ],
+    "totalPrice": 14.98,
+    "status": "On the Way",
+    "estimatedTime": "10 min",
+    "orderType": "Order & Take Home",
+    "progress": 80
+  },
+  {
+    "orderId": 4,
+    "customerName": "Sophia Wilson",
+    "items": [
+      {
+        "foodName": "Sushi Platter",
+        "quantity": 1,
+        "price": 18.99,
+        "image": "/sushi.jpg"
+      }
+    ],
+    "totalPrice": 18.99,
+    "status": "Delivered",
+    "estimatedTime": "0 min",
+    "orderType": "Online Order",
+    "phoneNumber": "987-654-3210",
+    "address": "456 Elm St, Los Angeles, CA",
+    "progress": 100
+  }
+]
