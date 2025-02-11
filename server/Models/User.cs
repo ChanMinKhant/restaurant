@@ -1,15 +1,17 @@
 using System;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace server.Models;
-
 public class User
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Phone { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; }
-    public string Role { get; set; }
+    [BsonId]
+    [BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
+    public required string Id { get; set; } // MongoDB uses a string ID by default
 
-    public List<Order> Orders { get; set; } = new List<Order>();
+    [BsonElement("email"), BsonRepresentation(BsonType.String)]
+    public string Email { get; set; } = string.Empty;
+
+    [BsonElement("password"), BsonRepresentation(BsonType.String)]
+    public string Password { get; set; } = string.Empty;
 }
