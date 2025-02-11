@@ -7,11 +7,14 @@ public class User
 {
     [BsonId]
     [BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
-    public required string Id { get; set; } // MongoDB uses a string ID by default
+    public string? Id { get; set; }
 
     [BsonElement("email"), BsonRepresentation(BsonType.String)]
-    public string Email { get; set; } = string.Empty;
+    public string? Email { get; set; }
 
     [BsonElement("password"), BsonRepresentation(BsonType.String)]
-    public string Password { get; set; } = string.Empty;
+    public string? Password { get; set; }
+
+    [BsonElement("role"), BsonRepresentation(BsonType.String)]
+    public required string Role { get; set; }
 }
