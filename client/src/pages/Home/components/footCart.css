@@ -1,0 +1,14 @@
+@keyframes fly-to-cart {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5) translate(-300px, -500px); /* Adjust values for your cart position */
+    opacity: 0;
+  }
+}
+
+.animate-fly {
+  animation: fly-to-cart 0.8s ease-in-out forwards;
+}

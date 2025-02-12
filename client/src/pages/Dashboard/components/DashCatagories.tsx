@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { PlusCircle, Users, Briefcase, Utensils } from 'lucide-react';
+import { PlusCircle, Users, Utensils } from 'lucide-react';
+import { HiUserAdd } from 'react-icons/hi';
 
 const categories = [
   {
@@ -15,11 +16,17 @@ const categories = [
     color: '#28a745',
   },
   {
-    name: 'Portfolio',
-    path: '/dashboard/portfolio',
-    icon: <Briefcase />,
+    name: 'Add Users',
+    path: '/dashboard/add-users/addUser',
+    icon: <HiUserAdd />,
     color: '#ffc107',
   },
+  // {
+  //   name: 'Portfolio',
+  //   path: '/dashboard/portfolio',
+  //   icon: <Briefcase />,
+  //   color: '#ffc107',
+  // },
   {
     name: 'Menu',
     path: '/dashboard/menu',

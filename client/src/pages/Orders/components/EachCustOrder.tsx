@@ -33,21 +33,6 @@ const EachCustOrder: React.FC<EachCustOrderProps> = ({
   };
   const [orderStatus, setOrderStatus] = useState(status);
   const [userType, setUserType] = useState<string>('admin');
-  // Determine progress percentage based on status
-  //   const getProgress = () => {
-  //     switch (orderStatus) {
-  //       case 'Pending':
-  //         return 20;
-  //       case 'Preparing':
-  //         return 50;
-  //       case 'On the Way':
-  //         return 80;
-  //       case 'Delivered':
-  //         return 100;
-  //       default:
-  //         return 0;
-  //     }
-  //   };
 
   return (
     <div className='flex md:flex-row flex-col justify-evenly px-4 py-3 mx-4 my-4 w-[96%] bg-[#daf5e1] rounded-md shadow-md'>

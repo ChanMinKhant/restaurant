@@ -45,9 +45,9 @@ const AddUser = () => {
     // Prepare data for submission
     const itemData = new FormData();
     itemData.append('name', formData.name);
-    itemData.append('price', formData.address);
-    itemData.append('category', formData.phone);
-    itemData.append('description', formData.role);
+    itemData.append('address', formData.address);
+    itemData.append('phone', formData.phone);
+    itemData.append('role', formData.role);
     itemData.append('email', formData.email);
     if (formData.image) {
       itemData.append('image', formData.image);
@@ -55,7 +55,7 @@ const AddUser = () => {
 
     // TODO: Send itemData to backend API
     console.log('Submitting:', formData);
-    alert('Item added successfully!');
+    alert('User added successfully!');
   };
 
   return (
@@ -81,7 +81,7 @@ const AddUser = () => {
           <label className='block text-gray-700 font-medium'>Address</label>
           <input
             type='text'
-            name='price'
+            name='address'
             value={formData.address}
             onChange={handleChange}
             className='w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-400'
@@ -91,8 +91,8 @@ const AddUser = () => {
         <div>
           <label className='block text-gray-700 font-medium'>Email</label>
           <input
-            type='number'
-            name='price'
+            type='email'
+            name='email'
             value={formData.email}
             onChange={handleChange}
             className='w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-400'
@@ -102,8 +102,8 @@ const AddUser = () => {
         <div>
           <label className='block text-gray-700 font-medium'>Phone</label>
           <input
-            type='number'
-            name='price'
+            type='tel'
+            name='phone'
             value={formData.phone}
             onChange={handleChange}
             className='w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-400'
@@ -115,7 +115,7 @@ const AddUser = () => {
         <div>
           <label className='block text-gray-700 font-medium'>User Role</label>
           <select
-            name='category'
+            name='role'
             value={formData.role}
             onChange={handleChange}
             className='w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-400'

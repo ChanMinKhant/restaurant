@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Delicious Burger",
     "image": "/burger.jpg",
     "price": 8.99,
@@ -9,7 +9,7 @@
     "trending": false
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Cheesy Pizza",
     "image": "/pizza.jpg",
     "price": 12.99,
@@ -18,7 +18,7 @@
     "trending": false
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "Spicy Noodles",
     "image": "/fb.jpg",
     "price": 7.49,
@@ -27,7 +27,7 @@
     "trending": false
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "Vanilla Ice Cream",
     "image": "/ice.jpg",
     "price": 4.99,
@@ -36,7 +36,7 @@
     "trending": false
   },
   {
-    "id": 5,
+    "id": "5",
     "name": "Steak",
     "image": "/steak.jpg",
     "price": 14.99,
@@ -45,7 +45,7 @@
     "trending": true
   },
   {
-    "id": 6,
+    "id": "6",
     "name": "Honey Pancake",
     "image": "/ff.jpg",
     "price": 10.49,
@@ -54,7 +54,7 @@
     "trending": true
   },
   {
-    "id": 7,
+    "id": "7",
     "name": "Smoothy Steak",
     "image": "/meat.jpg",
     "price": 7.99,
@@ -63,7 +63,7 @@
     "trending": false
   },
   {
-    "id": 8,
+    "id": "8",
     "name": "Salmon",
     "image": "/fish.jpg",
     "price": 13.99,
@@ -72,7 +72,7 @@
     "trending": true
   },
   {
-    "id": 9,
+    "id": "9",
     "name": "Ramen Stu",
     "image": "/healthy.jpg",
     "price": 5.99,
@@ -81,7 +81,7 @@
     "trending": false
   },
   {
-    "id": 10,
+    "id": "10",
     "name": "Chicken Wings",
     "image": "/chicken.jpg",
     "price": 6.99,
@@ -90,7 +90,7 @@
     "trending": false
   },
   {
-    "id": 11,
+    "id": "11",
     "name": "Pasta",
     "image": "/pasta.jpg",
     "price": 9.99,
@@ -99,7 +99,7 @@
     "trending": false
   },
   {
-    "id": 12,
+    "id": "12",
     "name": "Crispy Sweet",
     "image": "/crispy.jpg",
     "price": 5.99,

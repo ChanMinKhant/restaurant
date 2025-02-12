@@ -15,6 +15,8 @@ import DashboardHome from './pages/Dashboard/components/DashboardHome';
 import MenuList from './pages/Dashboard/components/MenuList';
 import ManageUsers from './pages/Dashboard/components/ManageUsers';
 import AddUser from './pages/Dashboard/components/AddUser';
+import Cart from './pages/Cart/Cart';
+import TableOrders from './pages/Orders/components/TableOrders';
 function App() {
   const [userType, SetUserType] = useState<string>('customer');
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/menu' element={<Menu />}></Route>
         <Route path='/orders' element={<Orders />}></Route>
+        <Route path='/cart' element={<Cart />}></Route>
+        <Route path='/table-orders' element={<TableOrders />}></Route>
         <Route path='/dashboard' element={<Dashboard />}>
           <Route index element={<DashboardHome />} />
           <Route path='addItem' element={<AddItem />} />

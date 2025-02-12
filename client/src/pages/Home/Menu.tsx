@@ -6,7 +6,7 @@ import Categories from './components/Categories';
 import FoodCard from './components/FoodCard';
 
 interface Food {
-  id: number;
+  id: string;
   name: string;
   image: string;
   price: number;
@@ -40,6 +40,7 @@ function Menu() {
           filteredFoods.map((food) => (
             <FoodCard
               key={food.id}
+              id={food.id}
               image={food.image}
               name={food.name}
               price={food.price}

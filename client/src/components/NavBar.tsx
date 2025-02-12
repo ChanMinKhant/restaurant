@@ -156,11 +156,11 @@ import {
   Home,
   Menu,
   ClipboardList,
-  History,
   ConciergeBell,
   User,
   LayoutDashboard,
 } from 'lucide-react';
+import { GiKnifeFork } from 'react-icons/gi';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -200,9 +200,9 @@ const NavBar = () => {
           </Link>
           <Link
             className='flex items-center gap-2 hover:bg-blue-300 px-3 py-2 rounded-lg transition'
-            to='/history'
+            to='/table-orders'
           >
-            <History size={20} /> Order History
+            <GiKnifeFork size={20} /> Table Orders
           </Link>
           {userType == 'admin' && (
             <Link
@@ -295,10 +295,11 @@ const NavBar = () => {
         </Link>
         <Link
           className='flex items-center gap-2 text-md px-3 py-2 border-b'
-          to='/history'
+          to='/table-orders'
           onClick={toggleMenu}
         >
-          <History size={20} /> Order History
+          <GiKnifeFork size={20} />
+          Table Orders
         </Link>
         {userType == 'admin' && (
           <Link

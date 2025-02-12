@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FiHome, FiPlus, FiBriefcase } from 'react-icons/fi';
+import { FiHome, FiPlus } from 'react-icons/fi';
 import {
   MdOutlineKeyboardDoubleArrowLeft,
   MdOutlineKeyboardDoubleArrowRight,
@@ -52,7 +52,7 @@ const Sidebar = () => {
             className='flex items-center gap-3 hover:bg-gray-700 p-2 rounded'
           >
             <HiUserAdd />{' '}
-            {isOpen && <div className='md:block hidden'>Add Item</div>}
+            {isOpen && <div className='md:block hidden'>Add User</div>}
           </Link>
           <Link
             to='/dashboard/manage-users'
@@ -61,13 +61,13 @@ const Sidebar = () => {
             <FaUsersCog />{' '}
             {isOpen && <div className='md:block hidden'>Manage Users</div>}
           </Link>
-          <Link
+          {/* <Link
             to='/dashboard/portfolio'
             className='flex items-center gap-3 hover:bg-gray-700 p-2 rounded'
           >
             <FiBriefcase />{' '}
             {isOpen && <div className='md:block hidden'>Portfolio</div>}
-          </Link>
+          </Link> */}
           <Link
             to='/dashboard/menu'
             className='flex items-center gap-3 hover:bg-gray-700 p-2 rounded'
