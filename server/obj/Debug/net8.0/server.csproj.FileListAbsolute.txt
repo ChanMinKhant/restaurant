@@ -6,10 +6,16 @@ C:\PJ\restaurant\server\bin\Debug\net8.0\server.deps.json
 C:\PJ\restaurant\server\bin\Debug\net8.0\server.runtimeconfig.json
 C:\PJ\restaurant\server\bin\Debug\net8.0\server.dll
 C:\PJ\restaurant\server\bin\Debug\net8.0\server.pdb
+C:\PJ\restaurant\server\bin\Debug\net8.0\DnsClient.dll
 C:\PJ\restaurant\server\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\PJ\restaurant\server\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\PJ\restaurant\server\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\PJ\restaurant\server\bin\Debug\net8.0\SharpCompress.dll
+C:\PJ\restaurant\server\bin\Debug\net8.0\Snappier.dll
 C:\PJ\restaurant\server\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\PJ\restaurant\server\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\PJ\restaurant\server\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\PJ\restaurant\server\bin\Debug\net8.0\ZstdSharp.dll
 C:\PJ\restaurant\server\obj\Debug\net8.0\server.csproj.AssemblyReference.cache
 C:\PJ\restaurant\server\obj\Debug\net8.0\server.GeneratedMSBuildEditorConfig.editorconfig
 C:\PJ\restaurant\server\obj\Debug\net8.0\server.AssemblyInfoInputs.cache
