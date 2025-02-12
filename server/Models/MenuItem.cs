@@ -26,6 +26,4 @@ public class MenuItem
     [BsonElement("stock"), BsonRepresentation(BsonType.Int32)]
     public int Stock { get; set; }
 
-    [BsonElement("createdAt")]
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
 }

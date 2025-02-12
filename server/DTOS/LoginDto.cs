@@ -2,7 +2,7 @@ using System;
 
 namespace server.DTOS;
 
-public class LoginDtos
+public class LoginDto
 {
     public required string Email { get; set; }
     public required string Password { get; set; }

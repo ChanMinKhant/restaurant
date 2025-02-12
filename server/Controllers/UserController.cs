@@ -62,9 +62,21 @@ namespace server.Controllers
             return Ok(result);
         }
 
+        [HttpPost("register")]
+        public async Task<ActionResult<User>> Register([FromBody] User user)
+        {
+            if (user == null) return BadRequest("User data is required.");
+
+            var existingUser = await _users.Find(u => u.Email == user.Email).FirstOrDefaultAsync();
+            if (existingUser != null) return Conflict("User with this email already exists.");
+
+            await _users.InsertOneAsync(user);
+            return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
+        }
+
         // login and logout methods will be added here
         [HttpPost("login")]
-        public async Task<ActionResult<User>> Login([FromBody] LoginDtos loginRequest)
+        public async Task<ActionResult<User>> Login([FromBody] LoginDto loginRequest)
         {
             if (loginRequest == null) return BadRequest("Login data is required.");
 
