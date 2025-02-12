@@ -16,5 +16,5 @@ public class User
     public string? Password { get; set; }
 
     [BsonElement("role"), BsonRepresentation(BsonType.String)]
-    public required string Role { get; set; }
+    public string Role { get; set; } = "customer"; 
 }
