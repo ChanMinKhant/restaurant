@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using server.Data;
+using server.DTOS;
 using server.Models;
 
 namespace server.Controllers
@@ -59,6 +60,38 @@ namespace server.Controllers
             if (result == null) return NotFound($"User with ID {id} not found.");
 
             return Ok(result);
+        }
+
+        // login and logout methods will be added here
+        [HttpPost("login")]
+        public async Task<ActionResult<User>> Login([FromBody] LoginDtos loginRequest)
+        {
+            if (loginRequest == null) return BadRequest("Login data is required.");
+
+            var user = await _users.Find(u => u.Email == loginRequest.Email && u.Password == loginRequest.Password).FirstOrDefaultAsync();
+            if (user == null) return Unauthorized("Invalid credentials.");
+            
+            var cookieOptions = new CookieOptions
+            {
+                Expires = DateTime.UtcNow.AddDays(1),
+                HttpOnly = true,
+                Secure = true,
+                Path = "/",
+            };
+            if (user.Id == null) return Unauthorized("Invalid credentials.");
+            Response.Cookies.Append("user_id", user.Id, cookieOptions);
+            Response.Cookies.Append("user_email", user.Email, cookieOptions);
+            Response.Cookies.Append("user_role", user.Role, cookieOptions);
+            return Ok(user);
+        }
+
+        [HttpPost("logout")]
+        public ActionResult Logout()
+        {
+            Response.Cookies.Delete("user_id");
+            Response.Cookies.Delete("user_email");
+            Response.Cookies.Delete("user_role");
+            return Ok();
         }
     }
 }

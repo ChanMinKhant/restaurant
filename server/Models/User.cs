@@ -10,7 +10,7 @@ public class User
     public string? Id { get; set; }
 
     [BsonElement("email"), BsonRepresentation(BsonType.String)]
-    public string? Email { get; set; }
+    public required string Email { get; set; }
 
     [BsonElement("password"), BsonRepresentation(BsonType.String)]
     public string? Password { get; set; }
