@@ -102,7 +102,7 @@ const ManageUsers = () => {
     <div className='p-6 max-w-4xl mx-auto mt-10'>
       <h1 className='text-2xl font-bold mb-4 text-gray-800'>Manage Users</h1>
       <Link
-        to='/dashboard/add-users/addUser'
+        to='/dashboard/add-users/new'
         className='mb-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg'
         // onClick={() => setIsModalOpen(true)}
       >

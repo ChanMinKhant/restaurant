@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import SearchBar from '../../../components/SearchBar';
 import MenuItem from './MenuItem';
 import foodData from '../../../data/food.json';
+import { Link } from 'react-router-dom';
 
 // Define Food interface outside the component for reuse
 interface Food {
@@ -38,9 +39,12 @@ function MenuList() {
             setSearchQuery={setSearchQuery}
           />
         </div>
-        <button className='bg-blue-500 mt-10 md:mr-15 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+        <Link
+          to={'/dashboard/add-items/new'}
+          className='bg-blue-500 mt-10 md:mr-15 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+        >
           Add Items
-        </button>
+        </Link>
       </div>
       {filteredFoods.length > 0 ? (
         filteredFoods.map((food) => <MenuItem key={food.id} food={food} />)

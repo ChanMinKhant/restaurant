@@ -41,14 +41,14 @@ const Sidebar = () => {
             {isOpen && <div className='md:block hidden'>Dashboard</div>}
           </Link>
           <Link
-            to='/dashboard/addItem'
+            to='/dashboard/add-items/new'
             className='flex items-center gap-3 hover:bg-gray-700 p-2 rounded'
           >
             <FiPlus />{' '}
             {isOpen && <div className='md:block hidden'>Add Item</div>}
           </Link>
           <Link
-            to='/dashboard/add-users/addUser'
+            to='/dashboard/add-users/new'
             className='flex items-center gap-3 hover:bg-gray-700 p-2 rounded'
           >
             <HiUserAdd />{' '}

@@ -222,9 +222,9 @@ const NavBar = () => {
         </div>
 
         {/* User Profile Icon */}
-        <div className='hidden md:flex items-center'>
+        <Link to={'/profile'} className='hidden md:flex items-center'>
           <User size={24} className='cursor-pointer hover:text-blue-500' />
-        </div>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -273,28 +273,28 @@ const NavBar = () => {
         style={{ transition: 'all 0.3s ease-in-out' }}
       >
         <Link
-          className='flex items-center gap-2 text-md px-3 py-2 border-b'
+          className='flex items-center gap-2 text-md px-3 py-2 border-b hover:bg-blue-300 hover:text-white'
           to='/'
           onClick={toggleMenu}
         >
           <Home size={20} /> Home
         </Link>
         <Link
-          className='flex items-center gap-2 text-md px-3 py-2 border-b'
+          className='flex items-center gap-2 text-md px-3 py-2 border-b hover:bg-blue-300 hover:text-white'
           to='/menu'
           onClick={toggleMenu}
         >
           <Menu size={20} /> Menu
         </Link>
         <Link
-          className='flex items-center gap-2 text-md px-3 py-2 border-b'
+          className='flex items-center gap-2 text-md px-3 py-2 border-b hover:bg-blue-300 hover:text-white'
           to='/orders'
           onClick={toggleMenu}
         >
           <ClipboardList size={20} /> Orders
         </Link>
         <Link
-          className='flex items-center gap-2 text-md px-3 py-2 border-b'
+          className='flex items-center gap-2 text-md px-3 py-2 border-b hover:bg-blue-300 hover:text-white'
           to='/table-orders'
           onClick={toggleMenu}
         >
@@ -303,7 +303,7 @@ const NavBar = () => {
         </Link>
         {userType == 'admin' && (
           <Link
-            className='flex items-center gap-2 text-md px-3 py-2 border-b'
+            className='flex items-center gap-2 text-md px-3 py-2 border-b hover:bg-blue-300 hover:text-white'
             to='/dashboard'
             onClick={toggleMenu}
           >
@@ -312,7 +312,7 @@ const NavBar = () => {
           </Link>
         )}
         <Link
-          className='flex items-center gap-2 text-md px-3 py-2 border-b'
+          className='flex items-center gap-2 text-md px-3 py-2 border-b hover:bg-blue-300 hover:text-white'
           to='/services'
           onClick={toggleMenu}
         >
@@ -320,9 +320,13 @@ const NavBar = () => {
         </Link>
 
         {/* Profile in Mobile Menu */}
-        {/* <div className='flex items-center gap-2 text-md px-3 py-2 border-t'>
+        <Link
+          to={'/profile'}
+          onClick={toggleMenu}
+          className='flex items-center gap-2 text-md px-3 py-2 border-t hover:bg-blue-300 hover:text-white'
+        >
           <User size={20} /> Profile
-        </div> */}
+        </Link>
       </div>
     </div>
   );

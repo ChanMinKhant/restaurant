@@ -5,7 +5,7 @@ import { HiUserAdd } from 'react-icons/hi';
 const categories = [
   {
     name: 'Add Items',
-    path: '/dashboard/addItem',
+    path: '/dashboard/add-items/new',
     icon: <PlusCircle />,
     color: '#007bff',
   },
@@ -17,7 +17,7 @@ const categories = [
   },
   {
     name: 'Add Users',
-    path: '/dashboard/add-users/addUser',
+    path: '/dashboard/add-users/new',
     icon: <HiUserAdd />,
     color: '#ffc107',
   },

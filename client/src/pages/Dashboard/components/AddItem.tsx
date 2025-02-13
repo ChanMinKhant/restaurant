@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { useParams } from 'react-router-dom';
 const AddItem = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -8,9 +8,9 @@ const AddItem = () => {
     description: '',
     image: null as File | null,
   });
-
+  const { id } = useParams();
   const [imagePreview, setImagePreview] = useState<string | null>(null);
-
+  const pageHeading = id === 'new' ? 'Add Item' : 'Edit Item';
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -52,7 +52,7 @@ const AddItem = () => {
 
   return (
     <div className='max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6'>
-      <h2 className='text-2xl font-semibold mb-4 text-center'>Add New Item</h2>
+      <h2 className='text-2xl font-semibold mb-4 text-center'>{pageHeading}</h2>
 
       <form onSubmit={handleSubmit} className='space-y-4'>
         {/* Name */}

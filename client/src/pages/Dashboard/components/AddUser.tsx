@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { useParams } from 'react-router-dom';
 const AddUser = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,7 +11,7 @@ const AddUser = () => {
   });
 
   const [imagePreview, setImagePreview] = useState<string | null>(null);
-
+  const { id } = useParams<{ id: string }>();
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -57,10 +57,10 @@ const AddUser = () => {
     console.log('Submitting:', formData);
     alert('User added successfully!');
   };
-
+  const pageHeading = id == 'new' ? 'Add new User' : 'Edit User';
   return (
     <div className='max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6'>
-      <h2 className='text-2xl font-semibold mb-4 text-center'>Add New User</h2>
+      <h2 className='text-2xl font-semibold mb-4 text-center'>{pageHeading}</h2>
 
       <form onSubmit={handleSubmit} className='space-y-4'>
         {/* Name */}
