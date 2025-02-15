@@ -16,12 +16,26 @@ public class Order
     public List<string>? MenuItemIds { get; set; }
 
     [BsonElement("status"), BsonRepresentation(BsonType.String)]
-    public string? Status { get; set; }
+    public string Status { get; set; } = "pending";
 
-    // toal price of the order
+    // approximated waiting time in minutes
+    [BsonElement("waitingTime"), BsonRepresentation(BsonType.Int32)]
+    public int WaitingTime { get; set; }
+    
+    // total price of the order
     [BsonElement("totalPrice"), BsonRepresentation(BsonType.Double)]
     public double TotalPrice { get; set; }
     
     [BsonElement("createdAt")]
     public DateTime CreatedAt { get; set; } = DateTime.Now;
+    
+    [BsonElement("updatedAt")]
+    public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
+
+    public void UpdateStatus(string newStatus)
+    {
+        Status = newStatus;
+        UpdatedAt = DateTime.Now;
+    }
 }

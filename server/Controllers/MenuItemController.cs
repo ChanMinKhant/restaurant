@@ -21,55 +21,73 @@ namespace server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MenuItem>>> Get()
         {
-            var items = await _menuItems.Find(FilterDefinition<MenuItem>.Empty).ToListAsync();
-            return Ok(items);
+            try {
+                var items = await _menuItems.Find(FilterDefinition<MenuItem>.Empty).ToListAsync();
+                return Ok(items);
+            } catch(Exception ex) {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         // GET: api/MenuItem/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<MenuItem>> Get(string id)
         {
-            var item = await _menuItems.Find(i => i.Id == id).FirstOrDefaultAsync();
-            if (item == null) return NotFound($"MenuItem with ID {id} not found.");
-            return Ok(item);
+            try {
+                var item = await _menuItems.Find(i => i.Id == id).FirstOrDefaultAsync();
+                if (item == null) return NotFound($"MenuItem with ID {id} not found.");
+                return Ok(item);
+            } catch(Exception ex) {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         // POST: api/MenuItem
         [HttpPost]
         public async Task<ActionResult<MenuItem>> Post([FromBody] MenuItem menuItem)
         {
-            if (!IsAuthorized()) return Forbid();
-
-            await _menuItems.InsertOneAsync(menuItem);
-            return CreatedAtAction(nameof(Get), new { id = menuItem.Id }, menuItem);
+            try {
+                if (!IsAuthorized()) return Forbid();
+                Console.WriteLine($"New MenuItem: {menuItem.Name}, Price: {menuItem.Price}, Description: {menuItem.Description}");
+                menuItem.Id = null;
+                await _menuItems.InsertOneAsync(menuItem);
+                return CreatedAtAction(nameof(Get), new { id = menuItem.Id }, menuItem);
+            } catch(Exception ex) {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         // PUT: api/MenuItem/{id}
         [HttpPut("{id}")]
         public async Task<ActionResult<MenuItem>> Put(string id, [FromBody] MenuItem menuItem)
         {
-            if (!IsAuthorized()) return Forbid();
-
-            var result = await _menuItems.FindOneAndReplaceAsync(i => i.Id == id, menuItem);
-            if (result == null) return NotFound($"MenuItem with ID {id} not found.");
-            return Ok(menuItem);
+            try {
+                if (!IsAuthorized()) return Forbid();
+                var result = await _menuItems.FindOneAndReplaceAsync(i => i.Id == id, menuItem);
+                if (result == null) return NotFound($"MenuItem with ID {id} not found.");
+                return Ok(menuItem);
+            } catch(Exception ex) {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         // DELETE: api/MenuItem/{id}
         [HttpDelete("{id}")]
         public async Task<ActionResult<MenuItem>> Delete(string id)
         {
-            if (!IsAuthorized()) return Forbid();
-
-            var result = await _menuItems.FindOneAndDeleteAsync(i => i.Id == id);
-            if (result == null) return NotFound($"MenuItem with ID {id} not found.");
-            return Ok(result);
+            try {
+                if (!IsAuthorized()) return Forbid();
+                var result = await _menuItems.FindOneAndDeleteAsync(i => i.Id == id);
+                if (result == null) return NotFound($"MenuItem with ID {id} not found.");
+                return Ok(result);
+            } catch(Exception ex) {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         // Helper method to check if user has required role
         private bool IsAuthorized()
         {
-            // var role = Request.Headers["Role"].ToString().ToLower();
             var role = "owner"; // Hardcoded for testing
             return role == "owner" || role == "chef";
         }

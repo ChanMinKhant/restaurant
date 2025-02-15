@@ -43,10 +43,11 @@ namespace server.Controllers
         [HttpPost]
         public async Task<ActionResult<Order>> Post([FromBody] Order order)
         {
-            if (order.MenuItemIds == null || !order.MenuItemIds.Any())
+            if (order.MenuItemIds == null || order.MenuItemIds.Count == 0)
                 return BadRequest("At least one MenuItem is required.");
 
             double totalPrice = 0;
+            order.Id = null;
             foreach (var menuItemId in order.MenuItemIds)
             {
                 var menuItem = await _menuItems.Find(m => m.Id == menuItemId).FirstOrDefaultAsync();
