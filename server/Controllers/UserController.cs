@@ -113,8 +113,6 @@ namespace server.Controllers
                 var cookieOptions = new CookieOptions
                 {
                     Expires = DateTime.UtcNow.AddDays(1),
-                    HttpOnly = true,
-                    Secure = true,
                     Path = "/",
                 };
                 if (user.Id == null) return Unauthorized("Invalid credentials.");

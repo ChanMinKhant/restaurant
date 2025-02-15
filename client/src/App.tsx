@@ -3,7 +3,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Menu from './pages/Home/Menu';
 import Navbar from './components/NavBar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProtectedRoute from './pages/ProtectedRoute';
 import './App.css';
 import Home from './pages/RealHome/Home';
@@ -18,8 +18,15 @@ import AddUser from './pages/Dashboard/components/AddUser';
 import Cart from './pages/Cart/Cart';
 import TableOrders from './pages/Orders/components/TableOrders';
 import ProfilePage from './pages/Profile/Profile';
+import Cookies from 'js-cookie';
 function App() {
   const [userType, SetUserType] = useState<string>('customer');
+  useEffect(() => {
+    const allCookies = Cookies.get();
+    // const userTypeFromCookie = allCookies['userType'];
+    console.log(allCookies);
+  }, []);
+
   return (
     <div className='w-screen h-screen bg-white scrollbar-hidden'>
       <Navbar />
