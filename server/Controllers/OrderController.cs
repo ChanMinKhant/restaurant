@@ -39,8 +39,9 @@ namespace server.Controllers
             return Ok(order);
         }
 
-        // POST: api/Order
-        [HttpPost]
+        // get users orders 
+        // POST: api/Order/u/:id
+        [HttpGet("{id}")]
         public async Task<ActionResult<Order>> Post([FromBody] Order order)
         {
             if (order.MenuItemIds == null || order.MenuItemIds.Count == 0)
